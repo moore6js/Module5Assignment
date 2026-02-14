@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module5Assignment.Page3"
+             Title="Page3">
+    <VerticalStackLayout Padding="20" Spacing="12">
+        <Label Text="Health Recommendations:"
+             FontSize="Large"
+             FontAttributes="Bold"
+             VerticalOptions="Center"
+             HorizontalOptions="Center" /> 
+        <Label x:Name="RecommendationLabel"
+             Text=""
+             FontAttributes="Bold"
+             VerticalOptions="Center"
+             HorizontalOptions="Center" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto" HeightRequest="400">
+            <Button Text="User Input Page"
+            Clicked="Page1"
+            Grid.Column="0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+            <Button Text="BMI Result Page"
+            Clicked="Page2"
+            Grid.Column="1"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

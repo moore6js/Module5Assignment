@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module5Assignment.MainPage">
+
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="12">
+            <!--gender image grid-->
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto" HeightRequest="400">
+                <!--Woman selector-->
+                <Border Stroke="Transparent"
+                        StrokeThickness="1"
+                        x:Name="WomanBorder"
+                        Grid.Column="0">
+                    <Image Source="women.jpg"
+                           HeightRequest="400">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedWoman"
+                                                 NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+
+                <!--Male Selector-->
+                <Border Stroke="Transparent"
+                        StrokeThickness="1"
+                        x:Name="ManBorder"
+                        Grid.Column="1">
+                    <Image Source="men.jpg"
+                           HeightRequest="400">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedMan"
+                                                 NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+            </Grid>
+
+            <!-- Weight section container -->
+            <Border Stroke="LightGray"
+                    StrokeThickness="1"
+                    Padding="10">
+                <StackLayout Spacing="8">
+                    <Label Text="Enter your weight (in lbs):"
+                           FontAttributes="Bold" />
+                    <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto" VerticalOptions="Center">
+                        <Slider Minimum="0" Maximum="300" Value="90"
+                                VerticalOptions="Center"
+                                x:Name="WeightSlider"
+                                ValueChanged="Weight_Changed"
+                                Grid.Column="0" />
+                        <Label x:Name="WeightLabel"
+                               Text="90 lbs"
+                               VerticalOptions="Center"
+                               HorizontalOptions="End"
+                               Grid.Column="1"
+                               Margin="8,0,0,0" />
+                    </Grid>
+                </StackLayout>
+            </Border>
+
+            <!-- Height section container -->
+            <Border Stroke="LightGray"
+                    StrokeThickness="1"
+                    Padding="10">
+                <StackLayout Spacing="8">
+                    <Label Text="Enter your height (in inches):"
+                           FontAttributes="Bold" />
+                    <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto" VerticalOptions="Center">
+                        <Slider Minimum="0" Maximum="100" Value="50"
+                                VerticalOptions="Center"
+                                x:Name="HeightSlider"
+                                ValueChanged="Height_Changed"
+                                Grid.Column="0" />
+                        <Label x:Name="HeightLabel"
+                               Text="50 in"
+                               VerticalOptions="Center"
+                               HorizontalOptions="End"
+                               Grid.Column="1"
+                               Margin="8,0,0,0" />
+                    </Grid>
+                </StackLayout>
+            </Border>
+
+            <!--Calculate button-->
+            <Button Text="View your results!"
+                    Clicked="Calculate_Clicked" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
