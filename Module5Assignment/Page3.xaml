@@ -16,11 +16,14 @@
              HorizontalOptions="Center" />
 
         <Grid ColumnDefinitions="*,*" RowDefinitions="Auto" HeightRequest="400">
+            <!-- Back to Page 1 -->
             <Button Text="User Input Page"
             Clicked="Page1"
             Grid.Column="0"
             VerticalOptions="Center"
             HorizontalOptions="Center" />
+
+            <!-- Back to Page 2 -->
             <Button Text="BMI Result Page"
             Clicked="Page2"
             Grid.Column="1"

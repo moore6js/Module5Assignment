@@ -83,7 +83,7 @@
                 </StackLayout>
             </Border>
 
-            <!--Calculate button-->
+            <!--Calculate button / Go to page 2-->
             <Button Text="View your results!"
                     Clicked="Calculate_Clicked" />
 

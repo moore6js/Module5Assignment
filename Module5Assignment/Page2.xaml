@@ -17,11 +17,13 @@
              HorizontalOptions="Center" />
 
         <Grid ColumnDefinitions="*,*" RowDefinitions="Auto" HeightRequest="400">
+            <!-- Back to Page 1 -->
             <Button Text="User Input Page"
                     Clicked="OnBackToPage1Clicked"
                     Grid.Column="0"
                     VerticalOptions="Center"
                     HorizontalOptions="Center" />
+            <!-- Go to Page 3 -->
             <Button Text="Health Recommendations Page"
                     Clicked="OnGoToPage3Clicked"
                     Grid.Column="1"
